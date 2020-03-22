@@ -29,7 +29,7 @@ $result = file_get_contents(
 				"jsonrpc" => "2.0",
 				"method" => "generateIntegers",
 				"params" => [
-					"apiKey" => $api,
+					"apiKey" => $token,
 					"n" => $num,
 					"min" => $min,
 					"max" => $max,
@@ -44,11 +44,12 @@ $result = file_get_contents(
 $result = json_decode($result);
 
 if (isset($result->error)) {
+	header($_SERVER["SERVER_PROTOCOL"]." 500 Internal Server Error", true, 500);
 	echo "An error occurred.  This error has been reported to the webmaster, please try again later.\n";
 	mail("www-data@ncovercash.dev","TRNG error report", $result->error->message);
-} else {
-	$out = implode(", ",$result->result->random->data);
+	die();
 }
+$out = implode(", ",$result->result->random->data);
 ?>
 <!DOCTYPE html>
 <html>
