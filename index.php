@@ -3,10 +3,24 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>
-			TRNG | Noah Overcash
+			True Random Number Generator | Noah Overcash
 		</title>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1.0" name="viewport" />
+
+		<meta name="subject" content="True Random Number Generator"/>
+		<meta name="description" content="Simple TRNG built off of RANDOM.ORG's API."/>
+		<meta name="copyright" content="Noah Overcash"/>
+
+		<meta name="language" content="EN"/>
+		<meta name="robots" content="index,follow"/>
+		<meta name="author" content="Noah Overcash, me@ncovercash.com"/>
+		<meta name="designer" content="Noah Overcash"/>
+		<meta name="reply-to" content="me@ncovercash.com"/>
+
+	    <meta property="og:title" content="True Random Number Generator"/>
+	    <meta name="og:description" content="Simple TRNG built off of RANDOM.ORG's API."/>
 		
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet"/>
 		<style type="text/css">
@@ -134,3 +148,4 @@
 		</footer>
 	</body>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
