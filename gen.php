@@ -10,7 +10,7 @@ $min = (int)$_GET["min"];
 $max = (int)$_GET["max"];
 $num = (int)$_GET["num"];
 
-if ($min != (int)$min || $max != (int)$max || $num != (int)$num) {
+if ($min != (int)$_GET["min"] || $max != (int)$_GET["max"] || $num != (int)$_GET["num"]) {
 	die("Invalid Request.");
 }
 
