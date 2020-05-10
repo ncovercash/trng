@@ -16,6 +16,10 @@ if ($min != (int)$_GET["min"] || $max != (int)$_GET["max"] || $num != (int)$_GET
 
 $unique = isset($_GET["unique"]) && ($_GET["unique"] === "on");
 
+if ($unique && $num > ($max - $min + 1)) { // +1 as it is inclusive
+	die("You requested unique values, however, the domain is too small.");
+}
+
 $result = file_get_contents(
 	"https://api.random.org/json-rpc/1/invoke",
 	false,
