@@ -1,7 +1,5 @@
 <?php
 
-require_once "token.php";
-
 if (!isset($_GET["min"]) || !isset($_GET["max"]) || !isset($_GET["num"]) || (isset($_GET["unique"]) && $_GET["unique"] !== "on")) {
 	die("Invalid Request.");
 }
@@ -33,7 +31,7 @@ $result = file_get_contents(
 				"jsonrpc" => "2.0",
 				"method" => "generateIntegers",
 				"params" => [
-					"apiKey" => $token,
+					"apiKey" => getenv("TRNG_RANDOM_TOKEN"),
 					"n" => $num,
 					"min" => $min,
 					"max" => $max,
